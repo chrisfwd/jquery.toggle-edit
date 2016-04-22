@@ -11,8 +11,8 @@ add jQuery and jquery.toggle-edit.js to your project
 wrap each input/static group in a container with te-group class
 use te-group-readonly for default readonly state 
 use te-group-editable for default editable state
-  
-  <div class="te-group te-group-readonly">...</div>
+
+    <div class="te-group te-group-readonly">...</div>
 
 add readonly element with .te-value-readonly class
 
@@ -21,14 +21,13 @@ add readonly element with .te-value-readonly class
 add editable element with .te-value-editable class
 
     <input type="text" class="form-control te-value-editable" value="Chris" />
-  
-  </div>
+
 
 ## Usage
 
   $('.container').toggleEdit();
   
-  
+
 ### toggle-edit is chainable
 
   $('.container').toggleEdit().show();
