@@ -6,7 +6,7 @@ jQuery plugin to toggle static/editable content
 add jQuery and jquery.toggle-edit.js to your project
 
 
-## HTML Structure
+### HTML Structure
 
   <!--
     wrap each input/static group in a container with te-group class
