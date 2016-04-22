@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToggleEdit Demo</title>
+
+    <!-- import bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- import toggleEdit css -->
+    <link rel="stylesheet" type="text/css" href="toggleEdit.css">
+</head>
+
+<body>
+
+	<div class="row">
+    	<div class="col-sm-6 col-md-4">
+
+            <div class="form-group">
+                <label class="control-label">first name</label>
+
+                <!-- wrapper for static and input values has .te-group class
+                	 set readonly (.te-group-readonly) as default here
+                	 but can be set to editable (.te-group-editable) if you want -->
+                <div class="te-group te-group-readonly">
+
+                	<!-- readonly value with .te-value-readonly class -->
+                    <p class="form-control-static te-value-readonly">Chris</p>
+
+                	<!-- editable value with .te-value-editable class -->
+                    <input type="text" class="form-control te-value-editable" value="Chris" />
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label">last name</label>
+                <div class="te-group te-group-readonly">
+                    <p class="form-control-static te-value-readonly">Lindsey</p>
+                    <input type="text" class="form-control te-value-editable" value="Lindsey" />
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary"><span class="ladda-label">Continue</span></button>
+
+    	</div>
+    	<div class="col-sm-6 col-md-8">
+
+    		<div class="form-group">
+
+    			<!-- your custom control to trigger toggleEdit -->
+                <label><input type="checkbox" class="te-toggle-control" /> edit</label>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- import jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!-- import toggleEdit plugin -->
+	<script type="text/javascript" src="jquery.toggleEdit.0.1.1.js"></script>
+
+	<!-- trigger toggleEdit functionality -->
+	<script type="text/javascript">
+
+		$(function() {
+
+            
+            //$toggleSections.toggleEdit();
+            //var fieldEditToggler = $toggleSections.data('toggleEdit');
+
+            // control to trigger readonly or editable is up to you
+            $(".te-toggle-control").on("change", function (event) {
+
+                var $toggleSections = $(this).closest(".row").find(".te-group");
+                var isChecked = $(this)[0].checked;
+                debugger;
+                $toggleSections.toggleEdit({editable: isChecked});
+                /*$($toggleSections).each(function(index){
+                    $(this).data('toggleEdit').toggle(checked);
+                });*/
+
+            });
+
+        });
+
+	</script>
+
+</body>
+</html>
