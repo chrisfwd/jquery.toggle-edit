@@ -6,7 +6,6 @@
 
 .te-value-readonly, 
 .te-value-editable {
-    opacity: 0;
     position: absolute;
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
@@ -23,5 +22,4 @@
 .te-group-readonly .te-value-readonly,
 .te-group-editable .te-value-editable {
     top: 0;
-    opacity: 1;
 }

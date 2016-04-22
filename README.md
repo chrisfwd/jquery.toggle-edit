@@ -1,12 +1,16 @@
 # jquery.toggle-edit
+
 jQuery plugin to toggle static/editable content
+
+Uses CSS transitions for performance. You can toggle multiple fields at once with minimal lag.
+
 
 ## Setup
 
-add jQuery and jquery.toggle-edit.js to your project
+add jQuery, jquery.toggleEdit.js, and toggle-edit.css to your project
 
 
-### HTML Structure
+#### HTML Structure
 
 Wrap each input/static group in a container with te-group class
 
@@ -35,7 +39,7 @@ The following applies toggle-edit to each .te-group element in the form, changes
     });
   
 
-### toggle-edit is chainable
+#### toggle-edit is chainable
 
     $('.container').toggleEdit().show();
   
